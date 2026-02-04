@@ -7,58 +7,61 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Navbar -->
   <header>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="programs.html">Programs</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="volunteer.html">Volunteer / Donate</a></li>
+        <li><a href="volunteer.html" class="active">Volunteer / Donate</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="volunteer-donate">
-    <h1>Get Involved</h1>
+  <!-- Volunteer Section -->
+  <section class="volunteer">
+    <h1>Become a Volunteer</h1>
+    <p>Join us in making a difference by volunteering your time and skills to our cause.</p>
 
     <!-- Volunteer Form -->
-    <h2>Volunteer Registration</h2>
     <form id="volunteer-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" required>
-
-      <label for="service">Preferred Service Area:</label>
-      <select id="service" required>
-        <option value="blood-donation">Blood Donation</option>
-        <option value="disaster-relief">Disaster Relief</option>
-        <option value="health-services">Health Services</option>
-      </select>
-
-      <button type="submit">Submit</button>
+      <div>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="service">Preferred Service</label>
+        <select id="service" name="service" required>
+          <option value="">Select a Service</option>
+          <option value="Blood Donation">Blood Donation</option>
+          <option value="Disaster Relief">Disaster Relief</option>
+          <option value="Health Services">Health Services</option>
+        </select>
+      </div>
+      <button type="submit">Register as Volunteer</button>
     </form>
 
-    <!-- Donation Form -->
-    <h2>Make a Donation</h2>
-    <form id="donation-form">
-      <label for="amount">Donation Amount:</label>
-      <input type="number" id="amount" required>
-
-      <label for="payment-method">Payment Method:</label>
-      <select id="payment-method" required>
-        <option value="credit-card">Credit Card</option>
-        <option value="paypal">PayPal</option>
-      </select>
-
-      <button type="submit">Donate</button>
-    </form>
+    <!-- Donation Section -->
+    <div class="donate">
+      <h2>Make a Donation</h2>
+      <p>Your contribution can help provide essential services to those in need.</p>
+      <form id="donation-form">
+        <label for="amount">Donation Amount ($)</label>
+        <input type="number" id="amount" name="amount" required>
+        <button type="submit">Donate Now</button>
+      </form>
+    </div>
   </section>
 
   <footer>
     <p>&copy; 2026 Philippine Red Cross</p>
   </footer>
+
+  <script src="volunteer.js"></script> <!-- Your JavaScript for form validation -->
 </body>
 </html>
